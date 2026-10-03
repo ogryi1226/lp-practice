@@ -30,6 +30,10 @@ header nav .inner {
   transition: color 0.3s;
 }
 
+.header-menu {
+  display: none;
+}
+
 .header-contact:hover {
   color: #333;
 }
@@ -214,4 +218,93 @@ footer {
   text-align: right;
   font-size: 13px;
   letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 1199px) {
+  .inner {
+    width: 97%;
+  }
+
+  .news .inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-images a {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .skills-images a:nth-child(3n + 1):not(:first-child) {
+    margin-top: 80px;
+  }
+
+  .keyvisual {
+    padding: 250px 0;
+  }
+
+  .news-image,
+  .news-text {
+    width: 100%;
+  }
+
+  .news-image {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .plan-table th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .plan-table td {
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  .header-contact {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .header-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #777;
+  }
+
+  .keyvisual {
+    padding: 200px 0;
+  }
+
+  .keyvisual h1 {
+    font-size: 40px;
+  }
+
+  .keyvisual p {
+    font-size: 30px;
+  }
+
+  .sns {
+    flex-direction: column;
+    padding: 50px 15px;
+  }
+
+  .sns a {
+    width: 100%;
+    padding: 50px 0;
+  }
 }
