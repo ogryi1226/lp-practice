@@ -258,6 +258,64 @@ footer {
   }
 }
 
+/* スクロールでふわっと出現するアニメーション */
+.news,
+.skills,
+.plan {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.news.is-visible,
+.skills.is-visible,
+.plan.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SKILLS画像の紙のようなホバーアニメーション */
+.skills-images a {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.skills-images a:hover {
+  transform: perspective(600px) rotateY(-12deg) rotateZ(-3deg);
+}
+
+
+/* オリジナル：CONTACTボタンのホバーアニメーション */
+.header-contact {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+
+.header-contact::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #333;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.header-contact:hover {
+  color: #333;
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-contact:hover::after {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   .plan-table th {
     font-size: 14px;
