@@ -259,6 +259,11 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+  .plan-table .table-header th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
   .plan-table th {
     font-size: 14px;
     line-height: 22px;
